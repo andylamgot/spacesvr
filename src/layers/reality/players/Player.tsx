@@ -3,6 +3,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { Camera, Quaternion, Raycaster, Vector3 } from "three";
 import NippleMovement from "../controls/NippleMovement";
 import KeyboardMovement from "../controls/KeyboardMovement";
+import Jump from "../controls/Jump";
 import PointerLockControls from "../controls/PointerLockControls";
 import TouchFPSCamera from "../controls/TouchFPSCamera";
 import {
@@ -137,6 +138,7 @@ export default function Player(
         <>
           <KeyboardMovement direction={direction} />
           <PointerLockControls />
+          <Jump />
         </>
       )}
       {device.xr && (

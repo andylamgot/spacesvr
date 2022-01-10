@@ -21,7 +21,6 @@ import { VRCanvas } from "@react-three/xr";
 import { isMobile } from "react-device-detect";
 import { Props as ContainerProps } from "@react-three/fiber/dist/declarations/src/web/Canvas";
 import { RegisterMenuItems } from "./utils/menu";
-import Jump from "./controls/Jump";
 
 const Container = styled.div`
   position: absolute;
@@ -118,7 +117,6 @@ export const StandardEnvironment = (
                   {!disableGround && <InfinitePlane height={-0.001} />}
                   {children}
                 </Player>
-                <Jump />
               </SimulationContext.Provider>
             </EnvironmentContext.Provider>
           </Physics>
